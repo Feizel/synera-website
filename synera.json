@@ -1,0 +1,335 @@
+{
+  "projectName": "Synera SaaS Website",
+  "description": "Professional corporate website for Synera, an AI-powered internal talent mobility and career development SaaS platform targeting HR leaders and L&D managers.",
+  "framework": "Next.js 14",
+  "language": "TypeScript",
+  "styling": "TailwindCSS",
+  "deployment": "Vercel",
+  
+  "brandGuidelines": {
+    "primaryColor": "#2a6d67",
+    "secondaryColor": "#00cc66", 
+    "accentColor": "#f9f4ec",
+    "neutralColor": "#2c2c2c",
+    "primaryFont": "Inter",
+    "bodyFont": "Open Sans",
+    "brandPersonality": ["Professional", "Innovative", "Trustworthy", "Empowering"]
+  },
+  
+  "pages": [
+    {
+      "name": "HomePage",
+      "route": "/",
+      "components": [
+        {
+          "type": "Navigation",
+          "props": {
+            "logo": "Synera",
+            "links": [
+              {"text": "Features", "href": "#features"},
+              {"text": "Solutions", "href": "#solutions"},
+              {"text": "Pricing", "href": "/pricing"},
+              {"text": "Resources", "href": "/resources"},
+              {"text": "Contact", "href": "/contact"}
+            ],
+            "ctaButton": {"text": "Request Demo", "href": "/demo"}
+          }
+        },
+        {
+          "type": "HeroSection",
+          "props": {
+            "headline": "Empower Your Talent Journey",
+            "subheadline": "Transform internal talent mobility with AI-powered career pathways, skills mapping, and intelligent opportunity matching.",
+            "description": "Synera helps enterprises reduce turnover by 25% and fill 60% of roles internally through data-driven talent development and career navigation.",
+            "primaryCTA": {"text": "Request a Demo", "href": "/demo"},
+            "secondaryCTA": {"text": "Watch Video", "href": "#video"},
+            "heroImage": "Interactive career pathway visualization",
+            "testimonialSnippet": {
+              "quote": "Synera transformed how we develop and retain our top talent",
+              "author": "Sarah Johnson, VP of People"
+            }
+          }
+        },
+        {
+          "type": "LogoBar",
+          "props": {
+            "title": "Trusted by leading organizations",
+            "logos": ["Fortune 500 Company A", "Tech Unicorn B", "Global Enterprise C"]
+          }
+        },
+        {
+          "type": "FeaturesSection",
+          "props": {
+            "title": "Intelligent Career Development Platform",
+            "subtitle": "Everything you need to unlock internal talent potential",
+            "features": [
+              {
+                "icon": "nodes-connected",
+                "title": "Intelligent Career Pathways",
+                "description": "AI-powered recommendations map personalized career journeys based on skills, interests, and organizational opportunities.",
+                "benefits": ["Reduce time-to-promotion by 40%", "Increase internal mobility by 60%"]
+              },
+              {
+                "icon": "network-graph",
+                "title": "Dynamic Skills Mapping", 
+                "description": "Visualize organizational skills with interactive graphs that identify gaps, adjacencies, and development opportunities.",
+                "benefits": ["Real-time skills intelligence", "Predictive capability planning"]
+              },
+              {
+                "icon": "marketplace",
+                "title": "Internal Talent Marketplace",
+                "description": "Match employees to projects, roles, mentorships, and rotations using intelligent algorithms and preferences.",
+                "benefits": ["Fill roles 3x faster", "Improve cultural fit by 85%"]
+              },
+              {
+                "icon": "analytics-dashboard",
+                "title": "Actionable HR Analytics",
+                "description": "Track talent mobility KPIs with real-time dashboards showing retention, progression, and skill development metrics.",
+                "benefits": ["Measure training ROI", "Predict attrition risk"]
+              }
+            ]
+          }
+        },
+        {
+          "type": "SolutionsSection",
+          "props": {
+            "title": "Solutions for Every Talent Challenge",
+            "solutions": [
+              {
+                "persona": "HR Directors",
+                "challenge": "High turnover and expensive external hiring",
+                "solution": "Reduce recruitment costs by 50% through internal talent development",
+                "outcome": "25% improvement in retention rates"
+              },
+              {
+                "persona": "L&D Managers",
+                "challenge": "Generic training with unclear career connection",
+                "solution": "Personalized learning paths aligned with career progression",
+                "outcome": "40% increase in training completion rates"
+              },
+              {
+                "persona": "Talent Acquisition",
+                "challenge": "Long hiring cycles and cultural fit issues",
+                "solution": "Internal-first hiring with pre-validated cultural alignment",
+                "outcome": "60% faster time-to-fill for critical roles"
+              }
+            ]
+          }
+        },
+        {
+          "type": "TestimonialsSection",
+          "props": {
+            "title": "Trusted by Talent Leaders",
+            "testimonials": [
+              {
+                "quote": "Synera gave us visibility into our talent that we never had before. Internal mobility increased 3x in the first year.",
+                "author": "Michael Chen",
+                "role": "Chief People Officer",
+                "company": "TechCorp",
+                "avatar": "testimonial-1.jpg"
+              },
+              {
+                "quote": "The AI recommendations are incredibly accurate. Employees love seeing their career possibilities mapped out clearly.",
+                "author": "Lisa Rodriguez", 
+                "role": "VP of Learning & Development",
+                "company": "Global Manufacturing Inc",
+                "avatar": "testimonial-2.jpg"
+              },
+              {
+                "quote": "ROI was immediate. We're saving $2M annually on external recruiting costs while improving employee satisfaction.",
+                "author": "David Park",
+                "role": "Head of Talent Acquisition",
+                "company": "Financial Services Leader",
+                "avatar": "testimonial-3.jpg"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CTASection",
+          "props": {
+            "title": "Ready to Transform Your Talent Strategy?",
+            "subtitle": "Join hundreds of companies using Synera to unlock their internal talent potential",
+            "primaryCTA": {"text": "Request Demo", "href": "/demo"},
+            "secondaryCTA": {"text": "View Pricing", "href": "/pricing"},
+            "features": ["Free pilot program", "30-day implementation", "Dedicated success manager"]
+          }
+        }
+      ]
+    },
+    {
+      "name": "DemoPage",
+      "route": "/demo",
+      "components": [
+        {
+          "type": "DemoHero",
+          "props": {
+            "headline": "See Synera in Action",
+            "description": "Book a personalized demo to see how Synera can transform your internal talent mobility"
+          }
+        },
+        {
+          "type": "LeadCaptureForm",
+          "props": {
+            "headline": "Request Your Personalized Demo",
+            "fields": [
+              {"name": "fullName", "label": "Full Name", "type": "text", "required": true},
+              {"name": "email", "label": "Work Email", "type": "email", "required": true},
+              {"name": "company", "label": "Company", "type": "text", "required": true},
+              {"name": "jobTitle", "label": "Job Title", "type": "text", "required": true},
+              {"name": "employeeCount", "label": "Number of Employees", "type": "select", "options": ["100-500", "500-1000", "1000-5000", "5000+"], "required": true},
+              {"name": "phone", "label": "Phone Number", "type": "tel", "required": false},
+              {"name": "challenges", "label": "Primary Talent Challenges", "type": "textarea", "required": false}
+            ],
+            "submitText": "Request Demo",
+            "benefits": [
+              "30-minute personalized walkthrough",
+              "See your use case in action", 
+              "ROI calculation for your organization",
+              "Implementation timeline discussion"
+            ]
+          }
+        },
+        {
+          "type": "FAQ",
+          "props": {
+            "title": "Demo FAQ",
+            "faqs": [
+              {
+                "question": "How long is the demo?",
+                "answer": "Our personalized demos typically last 30 minutes, with time for your specific questions and use cases."
+              },
+              {
+                "question": "What data do I need to prepare?",
+                "answer": "No preparation needed! We'll walk through Synera using sample data relevant to your industry and company size."
+              },
+              {
+                "question": "Can I see my specific HR systems integration?",
+                "answer": "Yes, we can show how Synera integrates with your existing HRIS, LMS, and other talent management tools."
+              },
+              {
+                "question": "Will I get pricing information?",
+                "answer": "Absolutely. We'll provide transparent pricing and ROI calculations based on your organization's size and needs."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "ContactPage", 
+      "route": "/contact",
+      "components": [
+        {
+          "type": "ContactHero",
+          "props": {
+            "headline": "Get in Touch",
+            "description": "Ready to transform your talent development? Our team is here to help."
+          }
+        },
+        {
+          "type": "ContactForm",
+          "props": {
+            "fields": [
+              {"name": "name", "label": "Name", "type": "text", "required": true},
+              {"name": "email", "label": "Email", "type": "email", "required": true},
+              {"name": "company", "label": "Company", "type": "text", "required": false},
+              {"name": "subject", "label": "Subject", "type": "text", "required": true},
+              {"name": "message", "label": "Message", "type": "textarea", "required": true}
+            ],
+            "submitText": "Send Message"
+          }
+        },
+        {
+          "type": "ContactInfo",
+          "props": {
+            "email": "hello@synera.com",
+            "phone": "+1 (555) 123-SYNC",
+            "address": "123 Innovation Drive, Tech City, CA 94000",
+            "socialLinks": [
+              {"platform": "LinkedIn", "url": "https://linkedin.com/company/synera"},
+              {"platform": "Twitter", "url": "https://twitter.com/synerahq"}
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  
+  "globalComponents": {
+    "Footer": {
+      "props": {
+        "sections": [
+          {
+            "title": "Product",
+            "links": [
+              {"text": "Features", "href": "/#features"},
+              {"text": "Solutions", "href": "/#solutions"},
+              {"text": "Pricing", "href": "/pricing"},
+              {"text": "Security", "href": "/security"}
+            ]
+          },
+          {
+            "title": "Company", 
+            "links": [
+              {"text": "About", "href": "/about"},
+              {"text": "Careers", "href": "/careers"},
+              {"text": "Press", "href": "/press"},
+              {"text": "Contact", "href": "/contact"}
+            ]
+          },
+          {
+            "title": "Resources",
+            "links": [
+              {"text": "Documentation", "href": "/docs"},
+              {"text": "API Reference", "href": "/api"},
+              {"text": "Help Center", "href": "/help"},
+              {"text": "Blog", "href": "/blog"}
+            ]
+          },
+          {
+            "title": "Legal",
+            "links": [
+              {"text": "Privacy Policy", "href": "/privacy"},
+              {"text": "Terms of Service", "href": "/terms"},
+              {"text": "Cookie Policy", "href": "/cookies"}
+            ]
+          }
+        ],
+        "bottomText": "© 2025 Synera. All rights reserved.",
+        "tagline": "Empowering talent journeys worldwide."
+      }
+    }
+  },
+  
+  "seo": {
+    "defaultTitle": "Synera - Empower Your Talent Journey",
+    "defaultDescription": "AI-powered internal talent mobility platform. Transform career development with intelligent pathways, skills mapping, and opportunity matching. Reduce turnover by 25%.",
+    "keywords": ["talent mobility", "career development", "HR technology", "internal recruiting", "skills mapping", "AI talent platform"],
+    "openGraph": {
+      "siteName": "Synera",
+      "type": "website",
+      "image": "/og-synera.png",
+      "twitterCard": "summary_large_image"
+    }
+  },
+  
+  "designSystem": {
+    "spacing": "8px base unit",
+    "borderRadius": "8px for cards, 6px for buttons",
+    "shadows": "subtle elevation with brand colors",
+    "animations": "smooth 200ms transitions",
+    "iconStyle": "outline style, consistent with professional SaaS aesthetic",
+    "buttonStyles": {
+      "primary": "solid background with primary color",
+      "secondary": "outline style with primary color border",
+      "ghost": "text only with hover background"
+    }
+  },
+  
+  "integrations": {
+    "analytics": "Google Analytics 4",
+    "forms": "Formspree or Netlify Forms",
+    "emailCapture": "ConvertKit or Mailchimp integration"
+  }
+}
